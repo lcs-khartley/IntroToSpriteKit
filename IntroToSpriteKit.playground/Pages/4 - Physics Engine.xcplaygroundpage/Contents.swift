@@ -132,8 +132,8 @@ view.showsPhysics = true
 
  */
 
-//// Make an edge loop at the boundaries of the scene
-//scene.physicsBody = SKPhysicsBody(edgeLoopFrom: scene.frame)
+// Make an edge loop at the boundaries of the scene
+scene.physicsBody = SKPhysicsBody(edgeLoopFrom: scene.frame)
 
 /*:
  - Callout(Reflect):
@@ -163,8 +163,8 @@ scene.childNode(withName: "one of the crates")?.physicsBody?.mass
 // What is the current mass of the boulder?
 boulder.physicsBody?.mass
 
-//// Change the boulder's mass
-//boulder.physicsBody?.mass = 0.05
+// Change the boulder's mass
+boulder.physicsBody?.mass = 0.05
 
 /*:
  ### Changing the Direction of Gravity
@@ -204,13 +204,29 @@ scene.physicsWorld.gravity
  */
 
 // Exercise 1: Write your code below.
+//boulder.physicsBody?.restitution = 0.8
 
 // Exercise 2: Write your code below.
-
-// Exercise 3: Write your code below.
+//for node in scene.children {
+//
+//    // Only look at nodes of type SKSpriteNode
+//    if let thisNode = node as? SKSpriteNode {
+//
+//        // Only the crates
+//        if thisNode.name == "one of the crates" {
+//
+//            // Add a physics body
+//            thisNode.physicsBody?.restitution = 1.0
+//        }
+//
+//    }
+//
+//}
+// Exercise 3: Write your code below
+//hill.physicsBody?.friction = 0.9
 
 // Exercise 4: Write your code below.
-
+//scene.physicsWorld.gravity = CGVector(dx: 0, dy: 9.8)
 
 /*:
 
